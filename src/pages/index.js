@@ -6,6 +6,8 @@ import Footer from 'components/footer/footer';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/outline';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Link from 'next/link';
+import QRCode from 'react-qr-code';
+
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -93,19 +95,26 @@ export default class Home extends React.Component {
                           Product built 13X Labs
                     </h1> 
                     {this.state.urlImage ?
-                    <div className='flex justify-center'>
+                    <div className=''>
+                      <div className='flex justify-center'>
                       <input className='inline-block px-6 py-2.5 w-full bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:shadow-lg  focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out'
                     value={`https://demo.storj-ipfs.com/ipfs/${this.state.urlImage}`} disabled/>
                       <CopyToClipboard text={`https://demo.storj-ipfs.com/ipfs/${this.state.urlImage}`}
                         onCopy={() => this.setState({copied: true})}>
                         <button className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out'>Copy</button>
                       </CopyToClipboard>
-                      <button>
+                      <button>  
                         <Link className='inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out' 
                         href={`https://demo.storj-ipfs.com/ipfs/${this.state.urlImage}`} target='_blank'>View</Link>
                       </button>
+                      </div>
+                      <p className='text-center mt-2'>QR Code Generator</p>
+                      <div className='mt-1 flex justify-center'>
+                        <QRCode value={`https://demo.storj-ipfs.com/ipfs/${this.state.urlImage}`} size={128} />
+                      </div>
                     </div>
                     : null}
+                    
                   </section>
                 </article>
               </div>

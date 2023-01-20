@@ -1,14 +1,24 @@
-# Getting Started
+# About File Sharing
 
 File Sharing by <a href="https://www.13xlabs.com/" target="_blank">13X Labs</a> is the simplest way to send your files around the world. <br/> This is Demo Project.
+
+## Features
+- Share and receive files using IPFS.
+- Upload or drag-and-drop individual files or entire directories
+- Preview files in-browser (browser-supported formats only) before sharing or downloading
+- Generates a QR code for share links for easy distribution
+- 100% mobile-friendly
+
+
+## Run development
+
 First, run the development server:
 
 ```bash
 npm run dev
 ```
 
-
-# Upload Files 
+## Upload Files 
 
 Upload any files to IPFS (Demo server storj-ipfs.com)
 
