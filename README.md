@@ -9,6 +9,40 @@ File Sharing by <a href="https://www.13xlabs.com/" target="_blank">13X Labs</a> 
 - Generates a QR code for share links for easy distribution
 - 100% mobile-friendly
 
+## Initial Set-up (Important)
+Install node-gyp globally
+```
+$ npm install -g node-gyp
+```
+Install the storj-nodejs Node.js package
+```
+$ npm install uplink-nodejs
+```
+Set Environment variable: <br />
+- MacOS:
+  - Set DYLD_LIBRARY_PATH environment variable
+    - Run following command inside root directory of your project
+      ```
+      export  DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$PWD/node_modules/uplink-nodejs/
+      ```
+    OR
+    - Copy libuplinkc*.* files from $PROJECTROOT/node_modules/uplink-nodejs/ to /usr/local/lib
+    <br/>
+- Windows:
+  - Set Path environment variable to libuplinkc*.* which is $PROJECTROOT/node_modules/uplink-nodejs
+
+```  
+For NodeJS
+```
+
+- Please ensure Node.js with version 10 or higher is installed
+  - Check Node.js version
+    ```
+    $ node -v
+    ```
+- please ensure make is already installed.
+- please ensure node-gyp dependencies is already installed.
+- please ensure @types/node dependencies is installed for running module in typescript.
 
 ## Run development
 
