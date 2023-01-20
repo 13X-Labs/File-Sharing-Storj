@@ -40,8 +40,6 @@ export default class Home extends React.Component {
         onUploadProgress: (progressEvent) => {
           const { loaded, total } = progressEvent;
           let precentage = Math.floor((loaded * 100) / total);
-          console.log("options");
-          console.log(precentage);
           if (precentage <= 100) {
             this.setState({
               precentageUpload: precentage
@@ -49,7 +47,6 @@ export default class Home extends React.Component {
           }
         }
       }).then((response) => {
-        console.log(response)
         this.setState({
           urlImage: response.data.Hash
         })
