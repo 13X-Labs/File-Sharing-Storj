@@ -64,6 +64,9 @@ export default class Home extends React.Component {
           <title>File Sharing - Upload File to IPFS | 13X Labs</title>
           <meta name="description" content="File Sharing - Upload File to IPFS by 13XLabs. 13X Labs is a R&D Technology company focusing on blockchain, dApp, Web3, Storage3, etc." />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:image" content="https://uploadfile.on.btfs.io/uploadfiletoipfs.png" ></meta>
+          <meta property="twitter:image" content="https://uploadfile.on.btfs.io/uploadfiletoipfs.png"></meta>
+          <meta property="og:image:type" content="image/png"></meta>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
