@@ -1,0 +1,30 @@
+name: Github Project CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build and export
+      run: npm run build && npm run export
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: 13xlabs-fileupload-old-version-sites
+        path: out/
